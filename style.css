@@ -1,0 +1,172 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Fundo da tela */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('./tela de fundo de login.png') center/cover no-repeat;
+}
+
+/* Form centralizado */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    width: 350px;
+    padding: 45px 35px;
+
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.3);
+    border-radius: 15px;
+}
+
+/* foco */
+.login-form input:focus {
+    border-bottom: 2px solid #fff;
+    transform: scale(1.02); /* ✨ micro interação */
+}
+
+/* Avatar */
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Caixa da senha */
+.password-box {
+    position: relative;
+    width: 250px;
+    overflow: visible;
+}
+
+/* Input da senha */
+.password-box input {
+    width: 100%;
+    padding-right: 0;
+}
+
+/* 👁️ */
+#togglePassword {
+    position: absolute;
+    right: -28px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* SVG */
+#togglePassword svg {
+    width: 22px;
+    height: 22px;
+    stroke: white;
+    fill: none;
+    stroke-width: 2;
+}
+
+#togglePassword svg:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+/* Inputs */
+.login-form input {
+    width: 250px;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    outline: none;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* Placeholder */
+.login-form input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+/* Autofill */
+.login-form input:-webkit-autofill,
+.login-form input:-webkit-autofill:hover,
+.login-form input:-webkit-autofill:focus,
+.login-form input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-text-fill-color: #fff !important;
+    background: transparent !important;
+}
+
+.login-form input:-moz-autofill {
+    box-shadow: 0 0 0px 1000px transparent inset !important;
+    -moz-text-fill-color: #fff !important;
+}
+
+/* 🔘 BOTÃO MELHORADO */
+.login-form button {
+    width: 250px;
+    padding: 12px;
+    border: 2px solid #aaa;
+    border-radius: 25px;
+    background: transparent;
+    color: #aaa;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.login-form button:hover {
+    border-color: #fff;
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Texto registro */
+.register-text {
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+}
+
+#createAccount {
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#createAccount:hover {
+    text-decoration: underline;
+    color: #00ff99;
+}
+
+/* Shake */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-6px); }
+    80% { transform: translateX(6px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.3s;
+}

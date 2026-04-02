@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form class="login-form" action="login.php" method="post">
+
+    <!-- Avatar -->
+    <div class="avatar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#fff" viewBox="0 0 24 24">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+        </svg>
+    </div>
+
+    <!-- Usuário -->
+    <input type="text" id="username" name="username" placeholder="Usuário" required>
+
+    <!-- Senha com olho SVG -->
+    <div class="password-box">
+        <input type="password" id="password" name="password" placeholder="Senha" required>
+
+       <span id="togglePassword">
+
+    <!-- olho aberto -->
+    <svg id="eyeOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/>
+        <circle cx="12" cy="12" r="3"/>
+    </svg>
+
+    <!-- olho fechado (SUBSTITUÍDO) -->
+    <svg id="eyeClosed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none;">
+        <path d="M2 2l20 20" stroke="white" stroke-width="2" fill="none"/>
+        <path d="M10.58 10.58a2 2 0 0 0 2.83 2.83" stroke="white" stroke-width="2" fill="none"/>
+        <path d="M9.88 5.08A10.94 10.94 0 0 1 12 5c7 0 11 7 11 7a21.77 21.77 0 0 1-4.35 5.94" stroke="white" stroke-width="2" fill="none"/>
+        <path d="M6.1 6.1A21.77 21.77 0 0 0 1 12s4 7 11 7c1.61 0 3.09-.36 4.42-1" stroke="white" stroke-width="2" fill="none"/>
+    </svg>
+
+</span>
+    </div>
+
+    <!-- Botão -->
+    <button type="submit">Entrar</button>
+
+    <!-- Criar conta -->
+    <p class="register-text">
+        Não tem conta? <span id="createAccount">Criar conta</span>
+    </p>
+
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>
