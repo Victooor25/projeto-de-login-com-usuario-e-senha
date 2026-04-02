@@ -16,4 +16,4 @@ Projeto de tela de login desenvolvido com HTML, CSS e JavaScript.
 
 ## 📸 Preview
 
-![Screenshot do projeto](./tela%20de%20fundo%20de%20login.png)
+![Screenshot do projeto](./readme%20projeto%20login.png)
